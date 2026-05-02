@@ -235,6 +235,10 @@ def render_overlay(frame, info, args, counter):
         scale = args.preview_width / W
         canvas = cv2.resize(canvas,
                             (args.preview_width, int(H * scale)))
+    # Correct color when saving or previewing image in window.
+    # TODO(sean) Look at how this is used throughout program and make sure there aren't
+    # any cases which actually expect this color format.
+    canvas = cv2.cvtColor(canvas, cv2.COLOR_BGR2RGBA)
     return canvas
 
 
