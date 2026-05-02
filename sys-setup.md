@@ -10,6 +10,7 @@ One on the Sage node:
 
 ```vncserver -kill :2
 vncserver :2 -geometry 1920x1080
+```
 
 On the local laptop, fire up TigerVNC or the MacOS native Screen Sharing and go to:
 
