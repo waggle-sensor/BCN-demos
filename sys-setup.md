@@ -8,7 +8,8 @@ Laptop on remote network,assuming X11 DISPLAY=:2
 
 One on the Sage node:
 
-```vncserver -kill :2
+```
+vncserver -kill :2
 vncserver :2 -geometry 1920x1080
 ```
 
