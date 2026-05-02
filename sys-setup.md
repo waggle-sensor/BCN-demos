@@ -8,15 +8,23 @@ Laptop on remote network,assuming X11 DISPLAY=:2
 
 One on the Sage node:
 
+If you have not set up a vnc password, or forgot it:
+
+`vncpassword`
+
+Then, start up the vncserver and X
+
 ```
 vncserver -kill :2
 vncserver :2 -geometry 1920x1080
 ```
 
-On the local laptop, fire up TigerVNC or the MacOS native Screen Sharing and go to:
+Back on your local laptop, fire up TigerVNC or the MacOS native Screen Sharing and go to:
 
 `vnc://localhost:10000`
 
-You will be asked for a password
+You will be asked for a password (the one you set above)
+
+
 
 
