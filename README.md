@@ -4,6 +4,8 @@ Let's put some instructions here
 
 
 ## Node and VNC Setup
+  See: [laptop and ssh configs](./sys-setup.md)
+  
 
 ## EdgeRunner
 
