@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "activating venv"
+source .venv/bin/activate
+
+export DISPLAY="${DISPLAY:-:1}"
+export YUNET_MODEL_PATH="$PWD/models/face_detection_yunet_2023mar.onnx"
+export PYWAGGLE_LOG_DIR="$PWD/output"
+export STREAM="${STREAM:-rtsp://camera:0Bscura%23@10.31.81.44:554/Preview_01_main}"
+
+echo "running demo on display ${DISPLAY}"
+
+python main.py \
+  --stream "${STREAM}" \
+  --preview 1 \
+  --detect_people 1 \
+  --line_x 0.5
